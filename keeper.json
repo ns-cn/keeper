@@ -1,0 +1,17 @@
+[
+  {
+    "cron": "*/20 * * * *",
+    "name": "启动ireader",
+    "commands": [
+      "pkill ireader",
+      "ireader --load /home/luomujian/ireader/fims.json >> ~/logs/ireader.log"
+    ]
+  },
+  {
+    "cron": "*/1 * * * *",
+    "name": "测试周期执行",
+    "commands": [
+      "ls -al >> logs/keeper.log"
+    ]
+  }
+]

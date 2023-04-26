@@ -9,9 +9,16 @@
   },
   {
     "cron": "*/1 * * * *",
-    "name": "测试周期执行",
+    "name": "测试周期执行6",
     "commands": [
-      "ls -al >> logs/keeper.log"
+      "ls -al"
+    ]
+  },
+  {
+    "cron": "*/1 * * * *",
+    "name": "测试周期执行5",
+    "commands": [
+      "ls -al"
     ]
   }
 ]

@@ -1,9 +1,14 @@
 package env
 
-import "github.com/ns-cn/goter"
+const VERSION = "1.2023.0426.001"
 
-const VERSION = "1.00.2023.0424"
+// 1.2023.0426.001
+/**
+更改版本命名方式
+添加文件变更监听，不需要重新启动即可生效
+*/
 
-var (
-	CfgFile = goter.NewCmdFlagString("", "load", "l", "config file (default is keeper.json)")
-)
+// 1.00.2023.0424
+/**
+基础版本
+*/

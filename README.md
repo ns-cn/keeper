@@ -13,7 +13,8 @@
     "cron": "10 * * * *",
     "name": "测试周期执行1",
     "commands": [
-      "ls -al"
+      "ls -al",
+      "echo hello"
     ]
   },
   {

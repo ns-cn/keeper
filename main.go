@@ -14,7 +14,7 @@ type CronCommand struct {
 }
 
 func main() {
-	root := goter.NewRootCmdWithAction("keeper", "A simple tools like crontab", env.VERSION, func(command *cobra.Command, strings []string) {
+	root := goter.NewRootCmdWithAction("keeper", "A simple tool like crontab", env.VERSION, func(command *cobra.Command, strings []string) {
 		checkShell()
 		pool := cron.New()
 		updateInFiles(pool)

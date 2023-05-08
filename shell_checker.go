@@ -14,13 +14,25 @@ func checkShell() {
 }
 
 // 根据一个字符串执行命令
-func execCommand(command string) {
+func execCommand(command string, cron CronCommand) {
 	defer func() {
 		if err := recover(); err != nil {
 			fmt.Println(err)
 		}
 	}()
-	cmd := exec.Command(env.CfgShell.Value, "-c", command)
+	var cmd *exec.Cmd
+	if cron.SpecificShell {
+		if cron.Shell == "" {
+			cmd = exec.Command(command)
+		} else {
+			cmd = exec.Command(cron.Shell, "-c", command)
+		}
+	} else {
+		cmd = exec.Command(env.CfgShell.Value, "-c", command)
+	}
+	if cron.Dir != "" {
+		cmd.Dir = cron.Dir
+	}
 	_, err := cmd.Output()
 	if err != nil {
 		fmt.Println(err)

@@ -1,11 +1,13 @@
 [
   {
-    "cron": "*/20 * * * *",
+    "cron": "*/1 * * * *",
     "name": "启动ireader",
     "commands": [
       "pkill ireader",
       "ireader --load /home/luomujian/ireader/fims.json >> ~/logs/ireader.log"
-    ]
+    ],
+    "specific_shell": true,
+    "shell": ""
   },
   {
     "cron": "*/1 * * * *",

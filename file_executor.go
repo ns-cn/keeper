@@ -23,12 +23,13 @@ func updateInFiles(cron *cron.Cron) {
 	fmt.Println(CronCommands)
 	// 每小时执行一次
 	for _, cronCommand := range CronCommands {
+		copy := cronCommand
 		var name = cronCommand.Name
 		commands := cronCommand.Commands
 		_, err := cron.AddFunc(cronCommand.Cron, func() {
 			fmt.Printf("%v : %s\n", time.Now(), name)
 			for _, cmd := range commands {
-				execCommand(cmd)
+				execCommand(cmd, copy)
 			}
 		})
 		if err != nil {

@@ -8,9 +8,12 @@ import (
 )
 
 type CronCommand struct {
-	Cron     string   `json:"cron"`
-	Name     string   `json:"name"`
-	Commands []string `json:"commands"`
+	Cron          string   `json:"cron"`
+	Name          string   `json:"name"`
+	Commands      []string `json:"commands"`
+	Dir           string   `json:"dir"`
+	SpecificShell bool     `json:"specific_shell"`
+	Shell         string   `json:"shell"`
 }
 
 func main() {

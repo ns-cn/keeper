@@ -4,8 +4,9 @@
     "name": "启动ireader",
     "commands": [
       "pkill ireader",
-      "ireader --load /home/luomujian/ireader/fims.json >> ~/logs/ireader.log"
+      "ireader --load fims.json >> ~/logs/ireader.log"
     ],
+    "Dir": "/home/luomujian/ireader",
     "specific_shell": true,
     "shell": ""
   },

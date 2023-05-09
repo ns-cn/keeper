@@ -19,7 +19,7 @@
       "ls -al",
       "echo hello"
     ],
-    "Dir": "/home/luomujian/ireader",
+    "dir": "/home/luomujian/ireader",
     "specific_shell": true,
     "shell": ""
   },
@@ -40,7 +40,7 @@
 | cron           | 定时任务的cron表达式，参考[crontab](https://crontab.guru/) |
 | name           | 定时任务的名称                                         |
 | commands       | 定时任务执行的命令                                       |
-| Dir            | 定时任务执行的目录                                       |
+| dir            | 定时任务执行的目录                                       |
 | specific_shell | 是否使用指定的shell运行命令                                |
 | shell          | 指定的shell运行命令 ,可选不指定，则不基于shell执行                 |
 

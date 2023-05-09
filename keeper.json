@@ -6,7 +6,7 @@
       "pkill ireader",
       "ireader --load fims.json >> ~/logs/ireader.log"
     ],
-    "Dir": "/home/luomujian/ireader",
+    "dir": "/home/luomujian/ireader",
     "specific_shell": true,
     "shell": ""
   },
